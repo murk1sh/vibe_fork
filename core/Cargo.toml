@@ -9,7 +9,7 @@ path = "src/lib.rs"
 
 [dependencies]
 # Fixed incorrect timestamps, better logs
-whisper-rs = { git = "https://github.com/thewh1teagle/whisper-rs.git", features = [
+whisper-rs = { git = "https://github.com/murk1sh/vibe_fork.git", features = [
 	"whisper-cpp-tracing",
 ], default-features = false, branch = "dev" }
 serde = { version = "1.0.195", features = ["derive"] }
@@ -31,6 +31,11 @@ tokio = { version = "1.35.1", features = [
 serde_json = { workspace = true }
 futures-util = "0.3.30"
 pyannote-rs = "0.2.7"
+cpal = "0.15.3"
+silero_vad = "0.2.0"
+crossbeam-channel = "0.5.12"
+eyre = "0.6.12"
+vibe_core = { path = "./core" }
 
 # Server
 utoipa = { version = "4.2.3", features = ["axum_extras"], optional = true }
